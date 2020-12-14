@@ -1,4 +1,5 @@
 mod app;
+mod line_plot;
 
 use wasm_bindgen::prelude::*;
 

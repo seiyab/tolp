@@ -1,5 +1,8 @@
 use yew::prelude::*;
 
+use crate::line_plot::Figure;
+use crate::line_plot::Line;
+
 pub struct App {}
 
 pub enum Msg {}
@@ -22,7 +25,14 @@ impl Component for App {
 
     fn view(&self) -> Html {
         html! {
-            <p>{ "Hello world!" }</p>
+            <div>
+                <p>
+                { "Hello world!" }
+                </p>
+                <Figure>
+                    <Line xys=vec![(10.0, 20.0), (20.0, 10.0), (30.0, 30.0)] />
+                </Figure>
+            </div>
         }
     }
 }
